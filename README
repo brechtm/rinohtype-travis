@@ -1,0 +1,14 @@
+# dotlocal.tar.xz contains Poppler 0.41.0 binaries for Ubuntu precise
+# Building instructions below:
+
+cd /tmp
+wget --no-check-certificate https://poppler.freedesktop.org/poppler-0.41.0.tar.xz
+tar xf poppler-0.41.0.tar.xz
+cd poppler-0.41.0
+
+# install libjpeg-dev, libz-dev, ...?
+
+./configure --prefix=$HOME/.local
+# check whether all required libs are installed
+make
+make install
